@@ -1,0 +1,1313 @@
+######################################## From lectures 01 to 20 #########################
+1. Border Properties lectures:
+
+    border-width: 2px;
+    border-style: solid, dotted, dashed, double, groove, ridge, inset, outset, none, mix;
+    border-color: green;
+
+    border: 2px solid yellow; // for one line property
+
+
+2. Outline Properties:
+    outline-width: 2px;
+    outline-style:  solid, dotted, dashed, double, groove, ridge, inset, outset, none, mix;
+    outline-color: green;
+    outline-offset: 7px;
+
+    outline: 2px solid gray; // for one line property
+    outline-offset:5px;
+
+3. Padding Properties:
+    padding-top:2px;
+    padding-right:2px;
+    padding-bottom:2px;
+    padding-left:3px;
+
+    padding: 2px;   // for all side with one value
+    padding: 2px 3px 4px 5px;   // for top right bottom and left side going as a clock wise.
+
+4. Margin Properties:
+    margin:auto;
+    margin-top:2px;
+    margin-left:2px;
+    margin-right:2px;
+    margin-bottom:3px;
+    
+    margin: 2px 3px 4px 5px;
+
+5. Height and width
+    width:auto 200px 100% 95%;
+    height:auto 200px;
+    min-height:100px;
+    max-height:400px;
+
+6. Box-sizing
+    box-sizing:border-box, content-box; // for remaining in the given width or height of the dix
+
+7. Overflow property
+    overflow: hidden, scroll, auto, visible;
+    overflow-x: scroll; // for Horizental scroll bar appear
+    overflow-y: hidden; // for hidden the vertically data
+
+8. border-radius
+    border-top-left-radius:2px;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:55px;
+    
+9. box-shadow property:
+    box-shadow: 2px 2px 5px 10px orange;    // h-offset, v-offset, blur, spread, color
+    prefix for mozilla fire fox
+     -moz-
+     like -moz-box-shadow: 2px 2px 5px 10px orange;
+     prefix for chrome and opera
+      -webkit-
+      -webkit-box-shadow: 2px 2px 5px 10px red;
+
+10. Float
+    float: left, right, none (default value);
+
+11. Clear Properties:
+        clear:left, right, both; // use with float value divs to not displayed on background
+        // very usefull property always use on every site on every page.
+
+12. font property:
+        font-size: xx-small, x-small, small, smaller, medium, large, x-large, xx-large, 12pt, 15pt, 15px, 2em;
+        font-family: verdana, times new roman, arial, helvetica;
+        font-weight: 0 ~ 900 , bolder, bold, light, lighter;
+        font-style: italic, oblique, etc
+        font-variant: small-caps,
+        line-height: 50px, 12px, etc;
+
+        //perperty in single line
+        // style, varient, weight, size/line-height, family;
+        font: oblique small-caps 700 16pt/5pt         verdana, arial;
+        font: 700 12pt verdana;
+
+13. Text Properties
+        text-align: left, right, center, justify; // justify mean equal line space from left and right too
+        text-align-last: left, right, center, start, last, auto; // special property for last line of paragraph
+        text-transform: uppercase, lowercase, capitalize, none; // capitalize mean capital first letter of every word.
+        text-indent: 100px, ; // first line start after 100px or given value
+        word-spacing: 30px; //spacing between words of paragraph
+        letter-spacing: 10px; // spacing between letters of word.
+
+14. text-decoration property
+        text-decoration-line: underline, overline, line-through, none;
+        text-decoration-color: red, green;
+        text-decoration-style: solid, dotted, dashed, double, wavy;
+
+        // type color style
+        text-decoration: underline red wavy;
+
+
+######################################## From lectures 20 to 40 #########################
+15. word-wrap and word-break property
+        word-wrap: normal, break-word;
+        word-break: break-all, keep-all;
+
+16. Text-shadow:
+        text-shadow:2px 2px 5px orange;
+            // Horizental, vertically, Blur-radius color
+17. white-space
+        white-space: normal, nowrap, pre, pre-line, pre-wrap;
+
+18. Text-overflow
+        text-overflow: clip, ellipsis, string;
+
+19. writing-mode property:
+        writing-mode: horizontal-tb, vertical-rl, vertical-lr, sideways-rl, sideways-lr;
+
+20. Column property
+        column-count: 2, 4, 3, 8, 9, 12;
+        column-gap: 2px, 5px, etc;
+        
+        column-rule-width: 3px; // width of line which seperates the columns
+        column-rule-style: solid, dashed, dotted, wavy, grooved, double, etc; // line style
+        column-rule-color: green, rgb(23,42, 254), #ffffff; // color of line
+        
+        column-rule: 2px solid red; // single line property of column-rule;
+
+        column-width: 200px; // with of every column
+        // this property is not compatible with mozilla firefox and safari so use this 
+        -moz-column-width: 300px; // for mozilla firefox browser
+        -webkit-column-width: 300px; // for safari browser
+
+        column-fill:
+        column-span: all, none;  // for heading of column data.
+        column:
+
+21. @font-face rule property:
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Complete_path_font_File_Location_with_extension);
+
+            // if having two files then
+            src: url(Complete_path_font_File_Location_with_extension), url(Complete_path_font_File_Location_with_extension);
+        }
+        // now use it in styling
+        h1 {
+            font-family: myFirstFont;
+            font-weight:790;
+            //etc style 
+        }
+
+22. Google fonts:
+        go to font.google.com/ 
+        select your desired font and click on pluse button to copy the link tag of html
+        paste that html tag in to your html page , in head section
+        and use it in your style tags;
+        through this you can seperate the server load to google font server;
+        please do not use more than 2 google font, it can slow your website loading
+
+
+23. List Style property
+        list-style-image: url(image_full_path_with_extension);
+        list-style-position: inside, outside;
+        
+        list-style-type: circle, square, disc, none; // for un order list
+        list-style-type: upper-alfa, lower-alfa, lower-roman, upper-roman, decimal; // for order list
+
+        // single line property: type, position, image
+        list-style: circle inside url(imagePath);
+
+        ul { for list numbers property }
+        ul li { for list item property }
+
+24. Background image    
+        background-image: url(Image_Path_with_Extension);
+        background-repeat: repeat, no-repeat, repeat-x, repeat-y, space, round;
+        background-position: center center; // combination of left, right, center annd also accept the px and percentage value too
+        background-color: yellow;
+
+        // single line short type property
+        background: url() no-repeat center center;
+        background: green url() no-repeat center center; // with background color and image
+
+25. Background-attachment property
+        background-attachment:fixed, scroll(default); 
+
+26. background-size property:
+        background-size: auto, length(px), percentage(%), cover, contain;
+
+        // for other lower version compatible
+        -moz-background-size:
+        -webkit-background-size:
+
+27. background-origin property
+        background-origin: padding-box, border-box, content-box;
+
+28. background-clip property:
+        background-clip: padding-box, border-box, content-box; 
+        // VERY USEFULL property if you make the font color transparent and then add 
+        // a background image to the text tag (h1, h2, etc) and use this background-clip 
+        // property then your image is only visible through that text, like text is cliped 
+        // from that image.
+
+29. color-Modes
+            Through Color name green, blue, etc
+            Through hexadecimal numbers #23da34, etc
+            Through rgb rgb(134, 237, 198), etc;
+            Through rgba, rgba(134, 237, 198, 0.8), (a for opacity, 0.8 means 80% opacity);
+            Through hsl(0, 100%, 50%), etc
+            Through hsla(0, 100%, 50%, 06),  (a for opacity, 0.6 means 60% opacity);
+
+30. gradient Types and Properties:
+        linear Gradient: linear-gradient(red, yellow); // with out direction;
+                         linear-gradient(to right, red, yellow);
+                         linear-gradient(to left, red, yellow);
+                         linear-gradient(to bottom right, red, yellow, green, blue, violet);
+                         linear-gradient(to top left, red, yellow, blue, green, red, yellow);
+                         linear-gradient(45deg, red, yellow, yellow, transparent, red, transparent);
+                         linear-gradient( -90deg, red, yellow, transparent, rgba(255, 10, 12, 0.6));
+
+        Radial Gradient:
+                        background: radial-gradient(red, yellow, green);
+                        background: radial-gradient(red 5%, yellow 15%, green 60%);
+                        background: radial-gradient(circle, red 5%, yellow 15%, green 60%);
+                        background: radial-gradient(closest-side at 50% 50%, red, yellow, green ); // show in center because 50% on x-axis and 50% in y-axis
+                        background:radial-gradient(closest-side at 20% 90%, red, yellow); // show at 20% of x-axis of div and 90% point of y-axis of the div
+                        background:radial-gradient(farthest-side at 20% 90%, red, yellow); // show at 90% of x-axis of div and 20% point of y-axis of the div
+                        
+                        background:radial-gradient(closest-corner at 20% 90%, red, yellow); // show at 20% of x-axis of div and 90% point of y-axis of the div
+                        background:radial-gradient(farthest-corner at 20% 90%, red, yellow); // show at 90% of x-axis of div and 20% point of y-axis of the div
+
+
+        Repeating Linear Gradient:
+                        repeating-linear-gradient(red, yellow 10%, blue 20%);
+                        repeating-linear-gradient(to left, red, yellow 10%, blue 20%);
+                        repeating-linear-gradient(to top right, red, yellow 10%, blue 20%);
+                        repeating-linear-gradient(60deg, red, yellow 10%, blue 20%);
+
+        Repeating Radial Gradient:
+                        repeating-radial-gradient(red, yellow, blue);
+                        repeating-radial-gradient(all Properties as radial gradien
+
+31. opacity property:
+                opacity:0.5; // with 50% transparent
+                filter:alpha(opacity=50); // for older versions of Internet explorer
+                background: rgba(180, 0, 0, 1); //  1 for 100% opacity or full color
+                background: rgba(180, 0, 0, 0.5); //  1 for 50% opacity or full color
+
+32.Background-blend-mode property:
+                background-blend-mode: normal, multiply, screen, overlay, darken, lighten
+                                        color-dodge, color-burn, hard-light, soft-light,
+                                        difference, exclusion, hue, color, saturation, luminosity;
+
+                         
+                background-image: linear-gradient(to right, red, yellow), url('/images/urlOf Image');
+                background-blend-mode: screen, overlay, darken, etc;
+
+33. Mix Blend Mode property
+                mix-blend-mode: normal, multiply, screen, overlay, darken, lighten
+                                        color-dodge, color-burn, hard-light, soft-light,
+                                        difference, exclusion, hue, color, saturation, luminosity;
+
+                // make two h2 tages and give then negative margin to display on one another
+                // then use mix-blend-mode property to see how we create incredible formates
+
+                h2.first // for first h2 tag in the document
+                h2.second // for second h2 tag in the document
+
+34. display property:
+                display: none, inline, block, inline-block, list-item, flex, grid, inline-flex,
+                        inline-grid, table, inline-table, table-row, table-cell, table-column, 
+                        table-caption, table-column-group, table-row-group, table-header-group,
+                        table-footer-group, run-in, contents;
+
+                        none: for not display to user like hiding this section for user.
+                        inline: to display items in a row (mostly used in text tags)
+                        block: to show span tag as div and span use all property of div like width, height, etc 
+                        inline-block: like block but with inline property
+                        list-item: convert span in to ul tag and given it other properties of ul
+
+
+######################################## From lectures 41 to 60 #########################
+
+35. Visibility property:
+                Visibility: visible, hidden, collapse;
+                // collapse used only on table.
+
+36. Basic layout:
+                done in codepen.io and also in localhost
+
+37. position property:
+                position: static, relative, absolute, fixed, sticky;
+                // sticky is in experiemental phase value;
+
+                // helper property which is used to help position 
+                // helper value are : left right, top bottom
+        
+        position: relative; //
+        left: 100px; // relative position from left with 100px margin; also used with -100px;
+        top: 100px;  // relative position from top with 100px margin;
+
+        position: absolute; 
+        left: 100px; // relative position from left with 100px margin; also used with -100px;
+        top: 100px;  // relative position from top with 100px margin;
+        // when scrolled, it also scrolled and disappeared with other tags or content;
+
+        position: fixed;
+        left: 100px; // relative position from left with 100px margin; also used with -100px;
+        top: 100px;  // relative position from top with 100px margin;
+        // when you scroll it always displayed from left and top margins
+
+
+        position: sticky;
+        left:50px;
+        top:10px;
+        // before scrolling the page it behaves like relative
+        // when we scroll the page it goes with scrolling and after 10px from top with behaves liked fixed and 
+        // did not disappear from the screen.
+
+
+        // when this div is in another div and we use position:relative; property in parent div
+        // then this child div properties "top / bottom" or " left / right" behaves with it's points;
+        // if its parent div have not position:relative; then this child div "left/right" and "top/bottom" are 
+        // behaved with respect to screen position;
+
+38. z-index properties:
+                z-index: auto(default), 1, -1;
+
+39. media queries properties:
+                value : all, print, screen, speech;
+                // very usefull to make responsive layout which automatically detect screen
+                // resolution and display content or data accordingly
+
+
+                @media screen and ( conditions ) {
+                        //css statements
+                } 
+                @media screen not ( conditions ) {
+                        //css statements
+                } 
+                @media screen only ( conditions ) {
+                        //css statements
+                }
+
+
+
+                conditions are : any-hover, any-pointer, aspect-ratio, color, color-gamut,
+                                color-index, grid, height, width hover, inverted-color, light-level, 
+                                max-aspect-radio, min-aspect-radio, max-color, max-color-index, max-height, 
+                                max-monochrome, max-resolution, max-width, 
+                                min-color, min-color-index, min-height, min-monochrome, min-resolution,
+                                min-width, monochrome, orientation, overflow-block, overflow-inline,
+                                pointer, resolution, scan, scripting, update
+
+
+
+
+                @media screen and (max-width:900px) {
+                        // if the display screen is less than max-width:900 then
+                        // this css is used to present the data in the webpage
+                }
+
+                @media screen and (max-width:600px) {
+                        // if the display screen is less than max-width:600 then
+                        // this css is used to present the data in the webpage
+                }
+
+                @media screen and (max-width:400px) {
+                        // if the display screen is less than max-width:400 then
+                        // this css is used to present the data in the webpage
+                }
+
+40. Table Properties :
+                border-spacing: 5px 15px; // spacing in columns with firsvalue, second value gives the spacing in rows
+                border-collapse: sperate (default), collapse; 
+                vertical-align: top, bottom, middle;
+                caption-side: top, bottom;
+                empty-cells: show (default), hide;
+                table-layout: auto; // automatically change width to show data in best view
+
+
+
+
+41. resize Protperty
+                values: horizental, vertical, both, none (default);
+                helper property Name: overflow:auto; // with out this property resize didnot work;
+                // you should also give width and height to that div too.
+                // this feature is by-default ON in textarea tag of HTML5;
+
+42. cursor property.. like mouse pointer; 
+                values: auto, default, none, context-menu, help, pointer, progress, wait, cell,
+                crosshair, text, vertical-text, alias, copy, move, no-drop, not-allowed, e-resize,
+                n-resize, ne-resize, nw-resize, s-resize, se-resize, sw-resize, w-resize, ew-resize, 
+                ns-resize, nesw-resize, nwse-resize, col-resize, row-resize, all-scroll, zoom-in, 
+                zoom-out, grab, grabbing;
+                .mainDivClass {
+                        width:400px; height:400px; cursor:wait;
+                }
+
+43. Measurement Units :
+                units: px, %, em, rem (root em), vw (viewp port width), vh (view port Height),
+                        vmax (viewport Maximum either width or height), vmin (viewport minimumeither width or height);
+
+
+44. Variables var() function :
+                //always declared in :root {} with prefix of "--" like
+                :root {
+                        --mainColor:red;
+                        --second-color:green;
+                }
+                // now using or calling these variables
+                h1 {
+                        color: var(--mainColor);
+                        background: var(--second-color);
+                }
+                // if you declare these type of variable in a div class then it is called
+                // local variable and you can use it in that div class in its child elements tooo.        
+
+
+45. calc() function
+                // this is used for any calculation in css3. operation are +, -, *, / .
+                .classA {  width: calc(100vw - 2em);     }
+
+                .className {  
+                        width: calc(100vw - 20px - 20px -1px -1px);  
+                        // subtracting the 20px padding of left and right and 1px border of left and right  
+                        // from 100 viewport width   
+                }
+
+46. clip-path properties:
+                value: cicle, ellipse, inset, polygon;
+
+                img or div {
+                        width:300px;
+                        height:300px;
+
+                        clip-path: circle(40% at 50% 50%); // first one is radius, second is x-axis and then y-axis
+                        // if you want to make a half circle then give the x-axis or y-axis with 0% value;
+
+                        clip-path: ellipse( 10% 40% at 50% 50%); // to make ellipse
+
+                        clip-path: inset(5% 20% 15% 10%); // top, right, bottom, left
+                        // inset is used to make only rectangles;
+
+                        clip-path:polygon(50% 0%, 0% 100%, 100% 100%); // point, point, point, how my point you like
+                        // points are made by giving the x-axis and y-axis value;
+                }
+
+47. Shape-outside property:
+                value: cicle, ellipse, inset, polygon;
+
+                 img or div {
+                        width:300px;
+                        height:300px;
+
+                        clip-path: circle(40% at 50% 50%); 
+                        shape-outside: circle(40% at 50% 50%); 
+                        shape-margin:20px;
+
+                        clip-path: ellipse( 10% 40% at 50% 50%);
+                        shape-outside: ellipse( 10% 40% at 50% 50%);
+                        shape-margin:20px;
+
+                        clip-path: inset(5% 20% 15% 10%); 
+                        shape-outside:inset(5% 20% 15% 10%);  
+                        shape-margin:20px;
+
+                        clip-path:polygon(50% 0%, 0% 100%, 100% 100%); 
+                        shape-outside: polygon(50% 0%, 0% 100%, 100% 100%);  
+                        shape-margin:20px;
+                }
+
+48. Filter Property:
+                values: none, blur(), brightness(), contrast(), drop-shadow(), grayscale(),
+                        hue-rotate(), invert(), opacity(), saturate(), sepia(), url();
+                        img {
+                                filter: blur(5px); // blur default 0
+                                filter: brightness(200%); // default 100%, less than 100 is going to darkness
+                                filter: contrast(150%); // default 100%, less than 100 is going to darkness
+                                
+                                filter: drop-shadow( 8px 8px 10px red); // same as text-shadow, values are x-axis y-axis blur-value color value;
+                                filter: drop-shadow( 4px 4px 6px red, 8px 8px 10px blue); 
+
+                                filter: grayscale(130%); // 100% for black and white pic
+                                filter: hue-rotate(50deg); // 0 deg default value (0 ~ 360)
+                                filter: invert(30%); // default 0% (0~100)
+                                filter: opacity(80%); // default 100%, (0 ~ 100)
+                                filter: saturate(150%); // default 100% value, 0% means un-saturated()
+                                filter: sepia(0~100); // sand color pic filter;
+                                filter: url() ; // svg pic url cover in other lectures;
+
+                                // multiple effect in single line. sperated with space
+                                filter: blur(2px) hue-rotate(100deg) drop-shadow(4px 4px 5px orange);
+                        }
+
+49.  transition Property:
+                // very useful when you change the width, height, or position of a div on hover, click or some other action
+                value: transition, transition-property, transition-duration, transition-delay, transition-timing-function;
+                transition-property: width, height, color, etc
+                transition-duration: timing of transition completion;
+                transition-delay: timing of delay to start a transition;
+                transition-timing-function: fast, slow, slow in start , slow in end, etc
+
+                div {
+                        width: 150px;
+                        height: 150px;
+                        background: pink;
+                        transition-property: width, height;
+                        transition-duration: 2s, 500ms; // 2 second , 500ms means 500 mili second;
+
+                }
+                div:hover {
+                        width: 300px;
+                        height: 300px;
+                }
+
+                //---------------------------------
+                div {
+                        width: 150px;
+                        height: 150px;
+                        background: pink;
+                        transition-property: width, height, background;
+                        transition-duration: 2s, 500ms, 3s; // 2 second , 500ms means 500 mili second;
+
+                }
+                div:hover {
+                        width: 300px;
+                        height: 300px;
+                        background:orange;
+                }
+
+                //_----------------------------------------------------------
+                // in single line
+                div {
+                        width: 150px;
+                        height: 150px;
+                        background: pink;
+                        transition: width, height, background   2s, 500ms, 3s;
+                }
+                div:hover {
+                        width: 300px;
+                        height: 300px;
+                        background:orange;
+                }
+
+        transition-timing-function: 
+                1. ease         (slow start, then fast, then end slow)
+                2. linear       (same speed from start to end)
+                3. ease-in      (slow start)
+                4. ease-out     (slow end)
+                5. ease-in-out  (slow start and end)
+                6. step-start   (jurk to start)
+                7. step-end     ( jurk to end )
+                8. steps(4, end)        (four steps to completion the transition)
+                9. cubic-bezier (let you define your own values);
+
+                div {
+                        width: 150px;
+                        height: 150px;
+                        background: pink;
+                        transition-property: width, height, background;
+                        transition-duration: 2s, 500ms, 3s; // 2 second , 500ms means 500 mili second;
+                        transition-timing-function: ease-in-out; 
+                }
+                div:hover {
+                        width: 300px;
+                        height: 300px;
+                        background:orange;
+                }
+
+
+
+                // short hand in one line
+                transition: propertyName  duration  timing-function  delayTime;
+                transition: all 2s linear 1s;
+
+                //----- actions list
+                hover           (mouse overflow)
+                active          (when Left-Mouse_Btn pressed)
+                focus  (input:focus {})
+                etc
+
+50. transform - 2D property:
+                transform:property
+                        rotate(angle), translate(x, y), translateX(xvalue), translateY(yvalue),
+                        scale(x, y), scaleX(xvalue), scaleY(yvalue), skew(x-angle, y-angle),
+                        skewX(x-angle), skewY(y-angle), matrix(n,n,n,n,n,n,n,n), none;
+
+                        // mostly used in hover, active, focus, with transition property for better animation
+
+                        div {
+                                width:150px;
+                                height 150px;
+                                background:orange;
+                                margin: 150px 300px;
+
+                                // everything child rotate inside this div                
+                                transform: rotate(90deg); // also in negative value like rotate(-127deg);
+
+                                transform:skewX(x-angle); // angle from left-bottom
+                                transform:skewY(y-angle); // angle from left-top
+
+                                transform-origin: left top; // the set the origin point of transform property
+
+                                transform: translate(xvalue, yvalue); 
+
+                                transform: matrix(scaleX(), skewY(), skewX(), scaleY translateX(), translateY());
+                                //please keep the sequence in given sequence
+                        }
+
+51. transform 3D Properties
+                transform: Property
+                        rotateX(angle), rotateY(angle), rotateZ(angle), rotate3d(angle);
+                        translateZ(value in measuring units), translate3d(x, y, z);
+                        scale3d(x, y, z), scaleZ(value in measuring units),
+                        perspective(n), matrix(n,n,n,n,n,n,n,n), none;
+
+                transform: perspective(800px) rotateX(30deg); // always use perspective property for 3D transform
+                transform-origin:left bottom; //also use transform-origin
+
+                 
+
+
+52. transform-style property:
+                values: flat(default), preserve-3d;
+                transform-style: preserve-3d;
+                // always use in parent div like perspective property 
+
+
+53. Backface-Visibility Property:
+                //depended property on transform , if you are not using the transform then it did not work;
+                values: visible, hidden;
+
+54. animation Properties:
+        animation-name:                                 // any name which you give to that animation
+        animation-duration:   1s, 2s;                   // time duration to complete that animation
+        animation-timing-function: linear, ease, etc    // smoothness function of animation
+        animation-delay:   1s,2s;                       // time delay to start that animation
+        animation-iteration-count: 1,2,3, infinite;     // how many times that animation run 
+        animation-direction: normal, reverse, alternate, alternate-reverse;
+        animation-fill-mode:
+        animation-play-state:
+
+        // short hand in single line
+        1. animationName, 2. duration, 3. iteration-count, 4. direction
+        animation: animationName_byProgramer 2s infinite alternate; 
+
+
+        select in CSS3 for animation
+
+        @keyframes animationName_byProgramer {
+                from {
+                        // CSS properties
+                }
+                to {
+                        //CSS properties
+                }
+        }
+
+        // or
+        @keyframes animationName_byProgramer {
+                0% {
+                        // CSS properties
+                }
+                20% {
+                        //CSS properties
+                }
+                80% {
+                        //CSS properties
+                }
+                100% {
+                        //CSS properties
+                }
+        } 
+
+        //Coding example
+
+        divClass {
+                width:300px;
+                height:300px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                line-height:300px;
+                margin: -150px;
+                background:transparent;
+                color: rgba(123, 198, 244, 0.8);
+                font-size:34px;
+                box-shadow: 0px 0px 15px rgba(100, 100, 0, 0.4);
+
+                animation-name: sampleAnimation;
+                animation-duration: 2s;
+                animation-direction:alternate;
+                animation-iteration-count: infinity;
+                animation-timing-function:linear;
+        } // end of div selector
+
+        @keyframes sampleAnimation {
+                from {
+                        border-radius:0%;
+                        // and other CSS3 Properties
+                }
+                to {
+                        border-radius:50%;
+                        // and other CSS3 Properties
+                }
+        } // end of keyframes
+
+55. animation-fill-mode Property:
+                values are: none (default value);
+                forwards  -> 
+                backwards ->
+                both      ->
+                // short hand in single line
+                1. animationName, 2. duration, 3. iteration-count, 4. direction 5. animation-fill-mode
+                animation: animationName_byProgramer 2s infinite alternate forwards; 
+
+
+56. animation-play-state properties
+                values: pause, running;
+                //mostly used on :hover block to pause the animation
+                divclassName:hover { animation-play-state:pause }
+
+
+57. object-fit property :
+                object-fit: fill, contain, cover, scale-down, none; 
+                cover // mostly used to represent the images in div to better fit in div with its cover property
+                contain // used for image reponsive design 
+                fill // images skew in div and did not represent in wel manner don't use it
+                scale-down; // same to contain value
+                none; // default value do nothing
+
+58. object-position property used with object-fit
+                values: bottom, top, left, right; 
+
+59. user-select property
+                values: auto (default), none, text, all;
+                // this is used to give permission to the visitor of website to select website page data like text images, etc
+(secure)        none -> user didnot able to select any thing in that div
+                text -> only text will be selected by user;
+                all -> text will be selected by single click                
+
+59. box-decoration-break property:
+                // useful for text representation and only worked with span
+                // did support by all browsers use -webkit- 
+                box-decoration-break : slice, clone;
+                slice ->    
+                clone -> 
+
+                //used with 
+                // order, background-color, background-image:gradient(), margin, padding, clip-path;
+                
+60. quotes property :
+                // always used in <q> tag of HTML for quotes
+
+                q {
+                        quotes: "$" "%" ; // qoutes start with $ and end with %-
+                        qoutes: "$" "%" "@" "#" ; // qoutes start with $ and end with %, child qoutes are start with @ and ends with #                        
+                }
+61. border-image and gradient for border-image property:
+                border-image-source: url(image_url);
+                bordre-image-slice: 21; 40; 50; ( values) 
+                border-image-width: // to manage the width of border-image;
+                border-image-outset: 30px; // how much pixel you want to display your border-image outside of your div;
+                border-image-repeat: repeat, stretch, round, space;
+
+                //sequence:: source | slice | width  | outset |  repeat ; 
+                border-image: url() 21 / 15px / 5px / round;  // use slash in numerical  values
+
+                border-image: linear-gradient(to left, red, yellow) 25;
+                // also use border-image Generator website;
+
+62. CSS Selectors Category :
+                1. Simple Selector ->
+                        i.      Type selector           -> HTMLtag {} like p {}, div{}, etc
+                        ii.     Class Selector          -> .className{} like .head {}, .leftBanner{}, etc
+                        iii.    ID selector             -> #idName {} like #heading{}, #siteLogo {}, etc
+                        iv.     Universal Selector      -> *{ CSS for all tages}, like *{color:red;}
+                                        #content * { css for all child tags of content id}
+                                        .className * { css for all child tags of className div}
+
+                2. Combinators Selectors ->
+                        i.      Descendant selector     -> .box p { css for p tag , child of className box Div }
+                                                        div p span {css for span of any div having p tag and p haiving span child tag }
+                        ii.     Direct Child Selector   ->  ul > li { color: red; // direct li child of ul tag, excluding the grand child or nested ul}
+
+                        iii.    Adjacent Sibling        -> div + p { css for any p tag which is written after any div tag, excluding every other p tag which is not sibling of div}
+                        iv.     General Sibling         -> div ~ p { css for any p tag which is written after div tag}
+                
+                3. Attribute Selector -> select html tag with its Attribute
+                                img[alt] { css for html img tag which also have alt attribute like <img src="" alt="nothing" /> }
+                                img[alt = "nothing"] { css for html img tag which also have alt attribute value "nothing" , like <img src="" alt="nothing" /> }
+                                a[target] { css for anchor tag of html which have target attribute; }
+
+                                //other properties
+                                img[alt ^= "value" ] { }
+                                img[alt |= "value" ] { }
+                                img[alt $= "value" ] { }
+                                img[alt *= "value" ] { }
+                                img[alt ~= "value" ] { }
+
+                4 . Pseudo-classes & Pseudo-elements ->
+                        Classes are 35 as following:
+                                :first-child            :last-child             :nth-child()
+                                :nth-last-child()       :nth-last-of-type()     :nth-of-type()
+                                :only-child             :only-of-type           :first-of-type
+                                :last-of-type           :empty                  :not()
+                                :lang()                 :link                   :hover
+                                :active                 :target                 :focus
+                                :checked                :disabled               :enabled
+                                :required               :optional               :in-range
+                                :out-of-range           :read-only              :read-written
+                                :valid                  :invalid                :default
+                                :root                   :visited
+                
+                //always use with html tags and also used in multiple times
+                like p:nth-type() { }, tr:nth-child(1):hover { }
+
+                pseudo elements
+                                ::after                 ::before                ::first-letter
+                                ::first-line            ::selection             ::placeholder
+
+                        p::first-letter { css for first letter of p tag mostly font-size, color, etc }
+                        p::first-line { css for first line of p tag }
+                        ::selection { css if user select any text, mostly bgcolor, color, etc }
+                        p::selection { }, h1::selection { }
+                        input::placeholder { css for placeholder of input }
+
+                        p::after { content: "hello";} // content value shows before the text of p tag
+                        ::before { content:url( image ); display:block; margin:10px; } // content value (image) show at the end of the text of p tag
+                        p:hover::after { content:"fill this"; } // when mouse pointer hover that p tag, a text "fill this" shows end of text of p tag
+                        
+
+
+                        
+63. CSS attr() function properties
+
+                        <p class="Mubashir" data-caption=" this is it">
+
+                        p::after { content: attr(data-caption); }
+                        p:hover::after { content: attr(class); }
+                         
+64. css counter, count-increment, counter-reset and counter() function: 
+                        body {
+                                //making a new counter
+                                counter-reset: my-counter 0; // declaring and assigning its initial value;
+                                // if you want to start from 51 then give initial value 50.
+                        }
+                        h2::before {
+                                content: "Chapter " counter(my-counter) " : "; // calling counter variable value
+                                counter-increment: my-counter 1; // incrementing the counter with value 1
+                                color:red;
+                        }
+                        content: "chapter " counter(my-counter) " : ";  // counter in number
+                        content: "chapter " counter(my-counter, upper-alpha) " : ";  // counter in Upper alphabits A,,B, C
+                        content: "chapter " counter(my-counter, lower-alpha) " : ";  // counter in lower alphabits a, b, c
+                        content: "chapter " counter(my-counter, upper-roman) " : ";  // counter in Upper roman I, II, III
+                        content: "chapter " counter(my-counter, lower-roman) " : ";  // counter in lower roman i, ii, iii
+
+
+
+
+65. caret-color property, get focus and blicking cursor properties
+                input, textarea {
+                        caret-color : blue; // auto is default 
+                        caret-color: transparent;
+                        // did not support all browsers
+                }
+
+66. @import rule property
+                // it is used when you have two css files and want to import one file in other file
+                @import "file_full_path_with_name_and_extension.css"; 
+                @import url("http://www.abc.com/colors.css");
+
+                @import "printstyle.css" print; // for print media
+                @import "screenstyle.css" screen; // for screen media
+                @import "speechstyle.css" speech; // for speech media
+                @import "allstyle.css" all; // for all media
+
+                @import "media-1020.css" media and (max-width:1020px); // only import when the visitor screen media max-width is less then 1021px;
+
+67. icon fonts with CSS
+                see video again and use it.. font-awesome , etc, very popular to use these days;
+
+68. scroll-bar styling
+                new pseudo element for scroll bar;
+                // not supported by all browser use prefix of -webkit- for chrome
+                ::scrollbar { // }
+                ::scrollbar-thumb { }
+                ::scrollbar-track{ }
+                ::scrollbar-corner { }
+
+                <div id="test"> </div>
+
+                body { 
+                        overflow:auto; // to show scrollbar
+                }
+
+                body::-webkit-scrollbar {
+                        width:10px; 
+                }
+                body::-webkit-scrollbar-track {
+                        background:green;
+                        border-radius:10px;
+                        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);   
+                }
+                body::-webkit-scrollbar-thumb {
+                        //background:yellow;
+                        background: lineargrdient( to bottom, red, yellow);
+                        border-radius:10px;
+                }
+                body::-webkit-scrollbar-corner {
+                        background:red;
+                }
+
+69. display: flow-root property:
+                // to over come the float:left or right issue of parent div height
+                .parent {
+                 display:flow-root;
+                }
+                .child_1 {
+                        float:left;
+                }
+                .child_2 {
+                        float:right;
+                }
+
+70. CSS Grid Properties
+                // two dimension grid system
+                // CSS Grid layout replaces float layout
+                //Fast and Clean code to represent data
+                // increase the readability of code
+                // No need of csss Framework like bootstrap etc
+
+                .parent {
+                        display:grid;  // all children become grid items
+                }
+
+         list of properties
+                1. grid-template-rows           2. grid-template-columns        3. grid-template-areas          
+                4. grid-template                5. grid-row-gap                 6. grid-column-gap
+                7. justify-items                8. align-items                  9. justify-content
+                10. align-content               11. grid-auto-rows              12. grid-auto-columns
+                13. grid-auto-flow              14. grid-row-start              15. grid-row-end
+                16. grid-row                    17. grid-column-start           18. grid-column-end
+                19. grid-column                 20. grid-area                   21. justify-self
+                22. align-self                  23. order
+
+71. grid-template-columns properties ->
+                .parent {
+                        width:700px;
+                        margin: 70px 0px 0px 50px;
+                        display:grid; // must be give display to grid propertyName
+                        //
+                        grid-template-columns: 300px 200px; // make two columns firts with 300px width and other with 200px
+                        grid-template-rows: 150px 100px;  // make first row height with 150px second with 100px and third's height is normal as its text height
+
+                        // you can give these pixel value in percentage, in auto to fill the remaining place
+                        // you can use "fr" unit which is only for grid property
+                        //like
+                        grid-template-columns: 1fr 1fr; // make two columns with equal width and use the whole width of parent
+                        grid-template-columns: 1fr 1fr 1fr; // make three columns with equal width and use the whole width of parent
+                        grid-template-columns: repeat(3 1fr); // make three columns with equal width and use the whole width of parent
+                        grid-template-columns: repeat(3 150px); // make three columns with 150px width
+                }
+                .item1 { background:yellowgreen; }
+                .item2 { background:yellowgreen; }
+                .item3 { background:yellowgreen; }
+                .....
+                .item6 { background:yellowgreen; }
+
+72. Grid-gap property:
+                grid-row-gap: 20px;   // gap between rows are 20px
+                grid-column-gap: 50px;  // gap between columns are 50px;
+
+                // in single line
+                grid-gap: 20px 50px; // first for rows and second for columns gap
+
+73. positioning-grid-items property::
+                // to display first item in 6th position                
+                .parent {
+                        width:700px;
+                        margin: 70px 0px 0px 50px;
+                        display:grid; 
+                        grid-template-columns: repeat(3 1fr);
+                }  
+                .item1 {
+                         background:yellowgreen; 
+                         /*
+                         grid-row-start: 2; // start from row 2 instead of first row
+                         grid-row-end:3; // ends with 3th row instread of 2nd row 
+                         grid-column-start:3; // starts from 3rd column instead of 1st column
+                         grid-column-end: 4;  // ends with 4 columns instead of 2nd column
+                         */
+                         grid-row : 2 / 3; // use slash for sperating the start from end
+                         grid-column: 3 / 4;
+                }
+                .item2 { background:yellowgreen; }
+                .item3 { background:yellowgreen; }
+                .....
+                .item6 { 
+                        background:yellowgreen; 
+                        grid-row-start: 1; // start from row 1 
+                        grid-row-end:2; // ends with 2nd row 
+                        grid-column-start:1; // starts from 1st column 
+                        grid-column-end: 2;  // ends with 2 columns 
+                }
+
+74. spaning grid items property ::
+                .parent {
+                        width:700px;
+                        margin: 70px 0px 0px 50px;
+                        display:grid; 
+                        grid-template-columns: repeat(3 150px); // make three columns with 150px width
+                }
+                .item1 { 
+                        background:yellowgreen; 
+                        grid-row:1 / 2; // starts from 1st and ends at 2nd row as normal view
+                        grid-column: 1 / 4; // starts with first column and ends at 4th column;
+                }
+                .item2 { background:yellowgreen; }
+                .item3 { background:yellowgreen; }
+                .....
+                .item6 { 
+                        background:yellowgreen; 
+                        grid-row:3 / 4; // starts from 1st and ends at 2nd row as normal view
+                        grid-column: 1 / span 2; // starts with first column and ends at 3th column;
+                }
+
+                
+                .item6 { 
+                        background:yellowgreen; 
+                        grid-row:3 / 4; // starts from 1st and ends at 2nd row as normal view
+                        grid-column: 1 / -1; // starts with first column and ends at last column without kow the total numbers of cols;
+                }
+
+75. Naming Grid Lines property ::
+                .parent {
+                        width:700px;
+                        margin: 70px 0px 0px 50px;
+                        display:grid; 
+                        grid-template-columns: [col1-start] 150px [col1-end col2-start] 100px [col2-end col3-start] 300px [col3-end col4-start] 500px [col4-end col5-start] 100px [col5-end];
+                        grid-template-row : [row1-start] 200px [row1-end row2-start] 300px [row2-end];
+                }
+                .item1 { 
+                        background:yellowgreen; 
+                        grid-row: row1-start / row1-ends; 
+                        grid-column: col1-start / col4-end;
+                }
+                .item2 { background:yellowgreen; }
+                .item3 { background:yellowgreen; }
+                .....
+                .item10 { 
+                        background:yellowgreen; 
+                        grid-row: row2-start / row10-end; 
+                        grid-column: col1-start / col3-end;
+                }
+
+76. Naming Grid area property
+                grid-template-areas:
+                grid-area:
+                // see the video id : 86 
+
+77. minmax() function property ::
+                grid-template-rows : repeat(3 minmax(150px 400px)); // 3 rows with height of minimum 150px and Maximum 400px
+                grid-template-cols : minmax(100px, 300px) 1fr 300px; // first col having width of minimum 100px and Maximum 300px
+                                                                        // second col having 1fr
+                                                                        // third col width 300px;
+                min-content : value of minimum content in height or width
+                max-content : value of Maximum content in height or width
+
+78. Implicit and explicit property
+                 grid-auto-rows:
+                 grid-auto-columns:
+                 grid-auto-flows:
+
+                 // these are the css for those rows or columns which you dont specify
+                 like 
+                 grid-auto-rows: 50px; // 50px row height for all other rows whichs height you dont give 
+
+                 // if you want to show other items of grid in columns then
+                 grid-auto-flow: column;
+                 
+                 // then you give the width of these columns
+                 grid-auto-columns:130px; // 130px width of all other columns 
+
+79. Grid items Alignment: 
+                // container properties or parent properties
+                align-items: start, end, center, stretch (default); 
+                justify-items: start, end, center, stretch (default); 
+
+                //single line property
+                place-items: align-items justify-items;
+               
+               //items properties or children properties
+                align-self:  start, end, center, stretch; 
+                justify-self: start, end, center, stretch (default); 
+
+                //single line property
+                place-self: align-self justify-self;
+
+80. Align Tracks in gids
+                // for Horizental alignments of items in grid
+                align-content: start, end, center, stretch, space-around, space-betweeen, space-evenly;
+
+                // for horizental alignments of items in grid
+                justify-content: start, end, center, stretch, space-around, space-betweeen, space-evenly;
+
+                // single line property
+                place-content:
+
+                grid-auto-flow: row dense; //
+
+81. Grid Auto-fill and auto-fit // mostly used to make responsive layouts;
+                grid-template-columns: repeat(auto-fill, 100px);
+                grid-template-rows:repeat(2, 100px);
+                // if the grid container (parent) width is larger than its all children width
+                // then all the children are display in signal line instead of two rows although you make two rows
+
+                grid-template-columns: repeat(auto-fit, 100px);
+                grid-template-rows:repeat(2, 100px);
+                // same like auto-fill, but it did not make extra track if the parent div have more space
+
+                
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+                grid-template-rows:repeat(2, 100px);
+                // above property fits all the children in single row it their minimum width is less the parent width
+
+82. Grid fit-content; // mostly used to make responsive layouts;        
+                grid-template-columns: fit-content(150px) fit-content(300px) 1fr; // making three columns
+                grid-template-rows: repeat(2, minmax(100px, min-content)); 
+
+83. Grid Order:
+                .item1 { background:orange; order:2; } // should display at fifth place in grid
+                .item2 { background:orange; }
+                .item3 { background:orange; order:1; } // should display at 4th place in grid
+                .item4 { background:orange; }
+                .item5 { background:orange; order:3; } // should display at 6th place in grid due to greatest order number
+                .item6 { background:orange; }
+
+84. Nested Grid in Grid:
+                // same property which are used in parent container are used in item or in child to make
+                // nested grid
+
+85. Grid overlapping items:
+                .parent {
+                        display:grid;
+                        grid-template-columns:repeat(2, 150px);
+                        grid-template-rows:repeat(2, 150px);
+                }
+                .items {
+                        max-width:150px;
+                }
+                .item1 {
+                        background: orange;
+                        grid-column: 1 / span 2;
+                        grid-row: 1 / span 2;
+                        align-self:start;
+                }
+                .item2 {
+                        background: orange;
+                        grid-column: 1 / span 2;
+                        grid-row: 1 / span 2;
+                        align-self: center;
+                        z-index: 1; // to show at top of others
+                }
+                .item3 {
+                        background: orange;
+                        grid-column: 1 / span 2;
+                        grid-row: 1 / span 2;
+                        justify-self: end;
+                }
+
+86. CSS Flex box (video 96)
+                //single dimension layout either row or column
+                .parent {
+                        display:flex;
+                }
+
+                //list of properties of flex
+                1. flex-direction               2. flex-wrap            3. flex-flow
+                4. flex-grow                    5. flex-shrink          6. flex-basis
+                7. flex                         8. justify-content      9. align-content
+                10. align-items                 11. align-self          12. order
+
+87. flex-direction
+                value: row, row-reverse, column, column-reverse;
+
+88.flex-wrap: 
+                value: wrap, nowrap, wrap-reverse;
+
+89. flex-flow  single line of flex-direction flex-wrap
+                flex-flow: <flex-direction> <flex-wrap>;
+
+90. justify-content  for horizental alignments of items in the flex
+                value: flex-start, flex-end, center, space-around, space-between, space-evenly;
+
+91. align-items for vertical alignments of items in the flex
+                value: flex-start, flex-end, center, stretch(default), baseline;
+
+92. align-content is used for alignment of content which are in two rows in vertical position
+                value: flex-start, flex-end, center, space-around, space-between, space-evenly;
+
+93. align-self is used in child item css for present in different from other children items
+
+94. order property is used in child item css for present it in you desired order
+
+95. flex-grow is used in child item css very usefull to make equal width and height of children items in flex
+                itemsClass {
+                        flex-grow: 0, 1, 2, 3, 4, numerical value;
+                }
+
+96. flex-basis is used for handle the width of indiviual items in the flex;
+                item11 {
+                        flex-basis: 200px;
+                }
+
+97. flex-shrink is used in child items to make responsive items and shrink if it screen width is less than the flex width
+                item11 {
+                        flex-shrink:1; // 1 for shrink and 0 for didnot shrink and maintain its given width
+                }
+
+98. flex single line short hand for flex-grow, flex-shrink, flex-basis
+                item11 {
+                        flex: <flex-grow> <flex-shrink> <flex-basis> ;
+                        flex: 0 1 200px;
+                        flex 0 1 auto;
+                }
+
+99. Flex margin auto property used in flex child item
+                childItem {
+                        margin:auto;
+                        //margin-top: auto; margin-bottom: auto; margin-left:auto; margin-right:auto;
+                }
+
+100. nexted flex in css is also used . It is just like nexted grid 
+
+101. video lecture 109 >  align form items
+
+        @media screen and (min-width: 300px) and (max-width:499px)  { // for small mobile screen }
+        @media screen and (min-width: 500px) and (max-width:767px)  { // for mobile screen }
+        @media screen and (min-width: 768px) and (max-width:991px)  { // for tablet screen }
+        @media screen and (min-width: 992px) and (max-width:1199px)  { // for small laptop screens }
+        @media screen and (min-width: 1200px) { // for laptop screen}
+
+
+        // make media as this sequence for responsive design, from small screen to large screen
+
+102. text-decoration-thickness property of text 
+                text-decoration-line: underline overline;  // for both lines upper and lower
+                text-decoration-color: red;
+                text-decoration-style: solid; 
+                text-decoration-thickness: 20px; // thickness of decoration line
+
+103. text-underline-offset property
+                text-decoration-line: underline overline;  // for both lines upper and lower
+                text-decoration-color: red;
+                text-decoration-style: solid; 
+                text-decoration-thickness: 20px; 
+                text-underline-offset: 10px;  // for offset
+
+104. current color CSS property
+                color: CurrentColor; // for extracting the parent color value and assign to this child color
+
+105. css priority level increase with !important hack 
+                color : red !important;
+
+106. @support selector: to detect the browsers support this property or not
+                @support (support-conditions) {}
+                @support (display::grid) {
+                        #mainID {display::grid;}
+                }
+
+                @support not (display::grid) {
+                        #mainID {
+                                display:flex;
+                        }
+                }
+                @support (display::flex) or (display:-webkit-flex) { }
+                @support (display::flex) and (display:-webkit-flex) { } 
+
+107. pseudo class :placeholder-shown :: used to detect the input field have any user input or empty 
+
+108. list-style-type property
+                ul {
+                        list-style-type: ' Test - ';
+                        list-style-position: inside;
+                        line-height: 35px;
+                }
+                ul {
+                        list-style-type: 'HTML code of any design ';  // google it and use that code here 
+                }
+
+109. scroll-behavior property ( used to target links inside that page)
+                value: auto (default), smooth;
+        html {
+                scroll-behavior:smooth;
+        }
+ 
+110. scroll-snap property
+        .parent (mostly html tag){ 
+                scroll-snap-type: y mandatory; // for vertical scroll bar
+                scroll-snap-type: x mandatory; // for Horizental scroll bar
+                scroll-snap-type: both mandatory; // for both scroll bar
+        }
+        .child (mostly div tag) {
+                scroll-snap-align: start, end, center;
+        }
+
+111.
